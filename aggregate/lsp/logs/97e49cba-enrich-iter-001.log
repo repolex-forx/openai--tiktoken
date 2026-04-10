@@ -1,0 +1,17 @@
+[2026-04-10T20:46:40Z] === ENRICH ITERATION 1 START | repo=openai/tiktoken sha=97e49cba ===
+[2026-04-10T20:46:40Z] [iter=1] PHASE START: enrich repo=openai/tiktoken sha=97e49cba runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/97e49cba-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/97e49cbadd500b5cc9dbb51a486f0b42e6701bee.nq.gz
+[2026-04-10T20:46:47Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-04-10T20:46:48Z] [iter=1] AST store loaded triples=109335 load_secs=1 mem_mb=225 MB
+[2026-04-10T20:46:48Z] [iter=1] Step 2: Finding LSP targets mem_mb=225 MB
+[2026-04-10T20:46:48Z] [iter=1] LSP targets found call_sites=862 imports=81 extends=0 implements=0 secs=0
+[2026-04-10T20:46:48Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=225 MB
+[2026-04-10T20:46:48Z] [iter=1] Position index built positions=7242 nodes_with_types=9404 secs=0 mem_mb=225 MB
+[2026-04-10T20:46:48Z] [iter=1] Step 3: Starting LSP resolution mem_mb=225 MB already_completed_types=[] already_completed_files=0
+[2026-04-10T20:46:48Z] [iter=1] Resolving target type target_type=call_site count=862
+[2026-04-10T20:47:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=16 resolved=186 errors=319 current=src/py.rs
+[2026-04-10T20:47:28Z] [iter=1] Target type resolved target_type=call_site resolved=252 errors=433 secs=39 mem_mb=225 MB
+[2026-04-10T20:47:28Z] [iter=1] Resolving target type target_type=import_statement count=81
+[2026-04-10T20:47:36Z] [iter=1] Target type resolved target_type=import_statement resolved=69 errors=0 secs=9 mem_mb=225 MB
+[2026-04-10T20:47:44Z] [iter=1] Step 5: Writing final enrichment file triples=7005
+[2026-04-10T20:47:44Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/97e49cbadd500b5cc9dbb51a486f0b42e6701bee.nq.gz size_kb=124
+[2026-04-10T20:47:44Z] [iter=1] PHASE END: enrich elapsed_s=64 elapsed_min=1.1 total_triples=7005
